@@ -19,7 +19,7 @@ if(isset($_POST['cadastrar'])){
 
 	inserir_alunos($conexao, $nome, $primeira, $segunda);
 
-	header("lacation:visualizar.php");
+	header("location:visualizar.php");
 
 }
 ?>
