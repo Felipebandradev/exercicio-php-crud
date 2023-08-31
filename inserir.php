@@ -1,3 +1,29 @@
+<?php
+require_once "src/funcoes-alunos.php";
+
+if(isset($_POST['cadastrar'])){
+
+	$nome = filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS);
+	
+	$primeira = filter_input(
+		INPUT_POST,"primeira",
+		FILTER_SANITIZE_NUMBER_FLOAT,
+		FILTER_FLAG_ALLOW_FRACTION
+    );
+	
+	$segunda = filter_input(
+		INPUT_POST,"segunda",
+		FILTER_SANITIZE_NUMBER_FLOAT,
+		FILTER_FLAG_ALLOW_FRACTION
+    );
+
+	inserir_alunos($conexao, $nome, $primeira, $segunda);
+
+	header("lacation:visualizar.php");
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,15 +41,15 @@
 
 	<form action="#" method="post">
 	    <p><label for="nome">Nome:</label>
-	    <input type="text" id="nome" required></p>
+	    <input type="text" name="nome" id="nome" required></p>
         
       <p><label for="primeira">Primeira nota:</label>
-	    <input type="number" id="primeira" step="0.01" min="0.00" max="10.00" required></p>
+	    <input type="number" id="primeira" name="primeira" step="0.01" min="0.00" max="10.00" required></p>
 	    
 	    <p><label for="segunda">Segunda nota:</label>
-	    <input type="number" id="segunda" step="0.01" min="0.00" max="10.00" required></p>
+	    <input type="number" id="segunda" name="segunda" step="0.01" min="0.00" max="10.00" required></p>
 	    
-      <button>Cadastrar aluno</button>
+      <button type="submit" name="cadastrar">Cadastrar aluno</button>
 	</form>
 
     <hr>

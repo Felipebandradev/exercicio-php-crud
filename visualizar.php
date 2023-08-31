@@ -1,10 +1,18 @@
+<?php
+require_once "src/funcoes-alunos.php";
+
+$ler_alunos = ler_alunos($conexao);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lista de alunos - Exercício CRUD com PHP e MySQL</title>
-<link href="css/style.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="css/estilos.scss">
 </head>
 <body>
 <div class="container">
@@ -18,8 +26,24 @@ para exibir a relação de alunos existentes no banco de dados.
 Obs.: não se esqueça de criar também os links dinâmicos para
 as páginas de atualização e exclusão. -->
 
+    <div class="container">
+  <div class="row ">
+    <?php foreach($ler_alunos as $alunos){ ?>
+      <h1> <?=$alunos["nome"]?></h1>
+                <p><b>Primeira Nota:</b> <?=$alunos["primeira"]?></p>
+                <p><b>Segunda Nota:</b> <?=$alunos["segunda"]?></p>
+                <p><b>Média: </b><?=$alunos["media"]?></p>
+                <p><a href="#">Editar</a> <a href="">Excluir</a></p>
+     <?php } ?>
+    
+      </div>
+</div>
+    
 
-    <p><a href="index.php">Voltar ao início</a></p>
+    
+
+<p><a href="index.php">Voltar ao início</a></p>
+  
 </div>
 
 </body>
