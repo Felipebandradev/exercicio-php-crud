@@ -38,6 +38,20 @@ as páginas de atualização e exclusão. -->
     
       </div>
 </div>
+
+<!--     
+    <div class="col-md-6 col-lg-4 column">
+      <div class="card gr-3">
+        <div class="txt">
+          <h1>UX/UI WEBsite </br>AND MOBILE app</h1>
+          <p>User Interface and User Experience Design.</p>
+        </div>
+        <a href="#">more</a>
+      <div class="ico-card">
+        <i class="fa fa-empire"></i>
+      </div>
+      </div>
+    </div> -->
     
 
     
