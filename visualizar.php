@@ -34,7 +34,7 @@ $quantidade = count($ler_alunos);
       <hr>
       <h2>Quantidade de alunos cadastrados: <?=$quantidade?></h2>
       
-      <p><a class="btn btn-outline-primary" href="inserir.php">Inserir novo aluno</a></p>
+      <p><a class="btn btn-primary" href="inserir.php">Inserir novo aluno</a></p>
       
          
          <!-- Aqui você deverá criar o HTML que quiser e o PHP necessários
@@ -76,7 +76,7 @@ $quantidade = count($ler_alunos);
       </div>         
         
       
-      <p><a class="btn btn-outline-primary" href="index.php">Voltar ao início</a></p>
+      <p><a class="btn btn-primary" href="index.php">Voltar ao início</a></p>
     </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

@@ -113,7 +113,10 @@
   color: rgba(0,0,0,1);
   background-color: aliceblue;
 }
-.card a:hover, .card a:focus{
+.card a:hover, .card a:focus, .btn:hover{
   color:aliceblue;
   background-color:  rgba(0,0,0,1);
+  text-decoration: none;
 }
+
+
