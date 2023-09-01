@@ -12,15 +12,15 @@ require_once "teste.php";
 <link rel="stylesheet" href="css/estilos.scss">
 <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body >
 <div class="container">
     <h1>Exercício - CRUD com PHP e MySQL</h1>
     <hr>
     <h2>Gerenciamento de alunos, notas, médias e aprovação/reprovação</h2>
     <hr>
     <ul>
-        <li><p><a  class="btn botao" href="visualizar.php">Visualizar Alunos</a></p></li>
-        <li><p><a class="btn botao" href="inserir.php">Inserir novo aluno</a></p></li>
+       <li> <p><a  class="btn botao" href="visualizar.php">Visualizar Alunos</a></p></li>
+       <li> <p><a class="btn botao" href="inserir.php">Inserir novo aluno</a></p></li>
     </ul>
 </div>
 

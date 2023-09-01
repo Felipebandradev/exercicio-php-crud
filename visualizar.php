@@ -1,21 +1,13 @@
 <?php
 require_once "src/funcoes-alunos.php";
 require_once "teste.php";
+require_once "src/funcoes-utilitarias.php";
 
 $ler_alunos = ler_alunos($conexao);
 
 $quantidade = count($ler_alunos);
 
- $situacao = function (float $media) :string {
-  if($media >= 7){ 
-  $resultado = "Aprovado";
-} elseif ( $media >= 5) { 
-      $resultado = "Recuperaçao";
- } else {
-   $resultado = "Reprovado";
- }
-  return $resultado;
- } ;
+ 
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +26,9 @@ $quantidade = count($ler_alunos);
   
     <main class="container">
 
-      <h1>Lista de alunos</h1>
+      <h1  class="text-center ">Lista de alunos</h1>
       <hr>
-      <h2>Quantidade de alunos cadastrados: <?=$quantidade?></h2>
+      <h2 class="text-center">Quantidade de alunos cadastrados: <?=$quantidade?></h2>
       
       <p><a class="btn botao" href="inserir.php">Inserir novo aluno</a></p>
       
@@ -70,7 +62,7 @@ $quantidade = count($ler_alunos);
                 <p><b>Média: </b><?=$alunos["media"]?></p>
                 <p><b>Situação:</b> <?=$situacao($alunos["media"])?> </p>
           </div>
-          <p><a class="btn" href="atualizar.php?=<?=$alunos["id"]?>">Editar 📝</a> <a class="btn excluir" href="excluir.php?id=<?=$alunos["id"]?>">Excluir 🗑</a></p>
+          <p><a class="btn" href="atualizar.php?id=<?=$alunos["id"]?>">Editar 📝</a> <a class="btn excluir" href="excluir.php?id=<?=$alunos["id"]?>">Excluir 🗑</a></p>
         </div>
       </div>
       
@@ -81,7 +73,9 @@ $quantidade = count($ler_alunos);
         
       
       <p><a class="btn botao"  href="index.php">Voltar ao início</a></p>
+     
     </main>
+   <script src="js/confirma-excluir.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

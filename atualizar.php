@@ -1,5 +1,34 @@
 <?php
+require_once "src/funcoes-utilitarias.php";
+require_once "src/funcoes-alunos.php";
 require_once "teste.php";
+
+// value="<?=$aluno["media"]" 
+$id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
+$aluno = ler_um_aluno($conexao,$id);
+
+if(isset($_POST['atualizar-dados'])){
+
+	$nome = filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS);
+	
+	$primeira = filter_input(
+		INPUT_POST,"primeira",
+		FILTER_SANITIZE_NUMBER_FLOAT,
+		FILTER_FLAG_ALLOW_FRACTION
+    );
+	
+	$segunda = filter_input(
+		INPUT_POST,"segunda",
+		FILTER_SANITIZE_NUMBER_FLOAT,
+		FILTER_FLAG_ALLOW_FRACTION
+    );
+
+	atualizar_aluno($conexao,$id, $nome, $primeira, $segunda);
+
+	header("location:visualizar.php");
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -24,17 +53,17 @@ require_once "teste.php";
         
 	    <div class="col-md-12">
             <p><label for="nome" class="form-label">Nome:</label>
-            <input type="text" name="nome"  class="form-control" id="nome" required></p>
+            <input value="<?=$aluno["nome"]?>"  type="text" name="nome"  class="form-control" id="nome" required></p>
         </div>
         
         <div class="col-md-6">
             <p><label for="primeira"  class="form-label">Primeira nota:</label>
-                    <input name="primeira" type="number" id="primeira" class="form-control" step="0.01" min="0.00" max="10.00" required></p>
+                    <input name="primeira" value="<?=$aluno["primeira"]?>" type="number" id="primeira" onkeyup="receber_media()" class="form-control" step="0.01" min="0.00" max="10.00" required></p>
         </div>
 	    
 	    <div class="col-md-6">
             <p><label for="segunda">Segunda nota:</label>
-            <input name="segunda" type="number" id="segunda"  class="form-control" step="0.01" min="0.00" max="10.00" required></p>
+            <input name="segunda" value="<?=$aluno["segunda"]?>" type="number" id="segunda" onkeyup="receber_media()"  class="form-control" step="0.01" min="0.00" max="10.00" required></p>
         </div>
 
         <div class="col-md-6">
@@ -54,14 +83,14 @@ require_once "teste.php";
 	        <input type="text" name="situacao"  class="form-control" id="situacao" readonly disabled>
         </p>
         </div>
-        <button name="atualizar-dados" class="btn botao">Atualizar dados do aluno</button>
+        <button name="atualizar-dados" type="submit" class="btn botao">Atualizar dados do aluno</button>
 	</form>    
     
     <hr>
     <p><a  class="btn botao" href="visualizar.php">Voltar à lista de alunos</a></p>
 
 </div>
-
+ <script src="js/formulario-dinamico.js"></script>
 
 </body>
 </html>
