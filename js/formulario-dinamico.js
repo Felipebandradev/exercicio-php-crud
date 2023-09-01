@@ -1,29 +1,39 @@
 
-function calcularmedia() {
+function calcularMedia(nota1, nota2) {
+    return (nota1 + nota2) / 2;
+}
+
+function determinarSituacao(media) {
+    if (media >= 7) {
+        return "Aprovado";
+    } else if (media >= 5) {
+        return "Recuperação";
+    } else {
+        return "Reprovado";
+    }
+}
+
+function atualizarResultados() {
     var nota1 = parseFloat(document.getElementById('primeira').value);
     var nota2 = parseFloat(document.getElementById('segunda').value);
-    var resultado = document.getElementById('media');
-    var situacao = document.getElementById('situacao');
+    var resultadoMedia = document.getElementById('media');
+    var resultadoSituacao = document.getElementById('situacao');
 
-    var media = (nota1 + nota2) / 2;
-    resultado.value = media.toFixed(2);
+        var media = calcularMedia(nota1, nota2);
+        resultadoMedia.value = media.toFixed(2);
 
-    if (media >= 7) {
-        situacao.value = "Aprovado";
-    }  else if(media >=5) {
-        situacao.value = "Recuperação";
-    }   else {
-        situacao.value = "Reprovado";
-    }
- 
+        var situacao = determinarSituacao(media);
+        resultadoSituacao.value = situacao;
+   
 }
 
 // Adicionar event listeners para detectar mudanças nos campos de entrada
 var inputNota1 = document.getElementById('primeira');
 var inputNota2 = document.getElementById('segunda');
 
-inputNota1.addEventListener('input', calcularmedia);
-inputNota2.addEventListener('input', calcularmedia);
+inputNota1.addEventListener('input', atualizarResultados);
+inputNota2.addEventListener('input', atualizarResultados);
 
 // Inicialmente, calcular a média com os valores padrão
-calcularmedia();
+atualizarResultados();
+
