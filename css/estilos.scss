@@ -2,11 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
-// $gr-1 :linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
-// $gr-2:linear-gradient(170deg, #B4EC51 0%, #429321 100%);
-// $gr-3:linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
 
-// .gr-1{ background: linear-gradient(170deg, #B4EC51 0%, #429321 100%);}
 .gr-2{background: linear-gradient(170deg, #B4EC51 0%, #429321 100%);}
 .gr-3{background: linear-gradient(170deg, #d76d6d 0%, #ae2323 100%);}
 .recuperacao {background:linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);}
@@ -68,48 +64,10 @@
       color:rgb(255, 255, 255);
     }
   }
-  // a{
-  //   z-index:3;
-  //   font-size: .7rem;
-  //   color:rgba(0,0,0,1);
-  //   margin-left:1rem;
-  //   position:relative;
-  //   bottom: -.5rem;
-  //   text-transform: uppercase;
-  //   &:after {
-  //     content:"";
-  //     display: inline-block;
-  //     height: 0.5em;
-  //     width: 0;
-  //     margin-right: -100%;
-  //     margin-left: 10px;
-  //     border-top: 1px solid rgba(255,255,255,1);
-  //     transition: .5s;
-  //   }
-  // }
-  // .ico-card{
-  //   position:absolute;
-  //   top: 0;
-  //   left:0;
-  //   bottom:0;
-  //   right: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   overflow: hidden;
-  // }
-  // i{
-  //   position: relative;
-  //   right: -50%;
-  //   top:60%;
-  //   font-size: 12rem;
-  //   line-height: 0;
-  //   opacity: .2;
-  //   color:rgba(255,255,255,1);
-  //   z-index: 0;
-  //  }
+
 }
 
-.card a{
+.card a, .botao{
   color: rgba(0,0,0,1);
   background-color: aliceblue;
 }
@@ -118,5 +76,7 @@
   background-color:  rgba(0,0,0,1);
   text-decoration: none;
 }
+
+
 
 
