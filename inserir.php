@@ -1,6 +1,5 @@
 <?php
 require_once "src/funcoes-alunos.php";
-require_once "teste.php";
 if(isset($_POST['cadastrar'])){
 
 	$nome = filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS);
@@ -37,6 +36,11 @@ if(isset($_POST['cadastrar'])){
 
 </head>
 <body>
+
+<?php
+require_once "teste.php";
+?>
+
 <div class="container">
 	<h1>Cadastrar um novo aluno </h1>
     <hr>

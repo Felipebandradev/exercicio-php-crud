@@ -1,6 +1,5 @@
 <?php
 require_once "src/funcoes-alunos.php";
-require_once "teste.php";
 require_once "src/funcoes-utilitarias.php";
 
 $ler_alunos = ler_alunos($conexao);
@@ -22,7 +21,10 @@ $quantidade = count($ler_alunos);
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+  
+<?php
+require_once "teste.php";
+?>
   
     <main class="container">
 

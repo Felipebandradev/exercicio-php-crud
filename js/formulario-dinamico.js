@@ -25,7 +25,7 @@ function atualizarResultados() {
         var situacao = determinarSituacao(media);
         resultadoSituacao.value = situacao;
    
-}
+};
 
 // Adicionar event listeners para detectar mudanças nos campos de entrada
 var inputNota1 = document.getElementById('primeira');
@@ -36,4 +36,6 @@ inputNota2.addEventListener('input', atualizarResultados);
 
 // Inicialmente, calcular a média com os valores padrão
 atualizarResultados();
+
+
 

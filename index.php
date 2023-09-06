@@ -1,7 +1,3 @@
-<?php
-require_once "teste.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,6 +9,11 @@ require_once "teste.php";
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body >
+
+<?php
+require_once "teste.php";
+?>
+
 <div class="container">
     <h1>Exercício - CRUD com PHP e MySQL</h1>
     <hr>

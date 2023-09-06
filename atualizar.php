@@ -1,7 +1,6 @@
 <?php
 require_once "src/funcoes-utilitarias.php";
 require_once "src/funcoes-alunos.php";
-require_once "teste.php";
 
 // value="<?=$aluno["media"]" 
 $id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
@@ -43,6 +42,10 @@ if(isset($_POST['atualizar-dados'])){
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+
+<?php
+require_once "teste.php";
+?>
 <div class="container">
     <h1>Atualizar dados do aluno </h1>
     <hr>
@@ -63,7 +66,7 @@ if(isset($_POST['atualizar-dados'])){
 	    
 	    <div class="col-md-6">
             <p><label for="segunda">Segunda nota:</label>
-            <input name="segunda" value="<?=$aluno["segunda"]?>" type="number" id="segunda" onkeyup="receber_media()"  class="form-control" step="0.01" min="0.00" max="10.00" required></p>
+            <input name="segunda" value="<?=$aluno["segunda"]?>" type="number" id="segunda" class="form-control" step="0.01" min="0.00" max="10.00" required></p>
         </div>
 
         <div class="col-md-6">

@@ -12,7 +12,6 @@
 
 body {
   height: 100vh;
-  background-color: #e4e3e8;
   padding: 0.375rem;
   font-family: Poppins, sans-serif;
   position: relative;
@@ -142,6 +141,15 @@ div a:hover{
 nav a {
     padding: 10px;
     text-align: center;
+}
+
+@media screen and (max-width: 904px) {
+
+  nav{
+    display: none;
+  }
+
+ 
 }
 
 
