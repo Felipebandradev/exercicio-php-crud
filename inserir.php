@@ -62,7 +62,7 @@ if(isset($_POST['cadastrar'])){
 	    <div class="col-md-6">
 			<p>
 			<label for="segunda" class="form-label">Segunda nota:</label>
-			<input type="number" id="segunda"  class="form-control" name="segunda" step="0.01" min="0.00" max="10.00" required>
+			<input type="number" id="segunda"  class="form-control"  name="segunda" step="0.01" min="0.00" max="10.00" required>
 				</p>
 		</div>
 	    
